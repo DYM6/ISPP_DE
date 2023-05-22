@@ -1,0 +1,34 @@
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe.config
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\ExamSystem.exe
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\ExamSystem.pdb
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\EntityFramework.dll
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\EntityFramework.xml
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\bin\Debug\ru\EntityFramework.resources.dll
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.AssemblyReference.cache
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.SuggestedBindingRedirects.cache
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.ExamForm.resources
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.Properties.Resources.resources
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.GenerateResource.cache
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cache
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.exe
+C:\Temp\ISPP-05_DE\Exams\ExamSystem\ExamSystem\obj\Debug\ExamSystem.pdb
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.AssemblyReference.cache
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.ExamForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Properties.Resources.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.GenerateResource.cache
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.CoreCompileInputs.cache
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.exe
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.pdb
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\ExamSystem.exe.config
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\ExamSystem.exe
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\ExamSystem.pdb
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\EntityFramework.dll
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\EntityFramework.SqlServer.dll
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\EntityFramework.xml
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\EntityFramework.SqlServer.xml
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\ru\EntityFramework.resources.dll
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.AuthForm.resources

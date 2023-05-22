@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище ExamModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ChiefExpert">
+    <Key>
+      <PropertyRef Name="IdChiefExpert" />
+    </Key>
+    <Property Name="IdChiefExpert" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Passport" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdSkill" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="IdExam" />
+    </Key>
+    <Property Name="IdExam" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSkill" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "ispp05ex13.dbo.ExamParticipant" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="ExamParticipant">
+    <Key>
+      <PropertyRef Name="IdExam" />
+      <PropertyRef Name="IdParticipant" />
+    </Key>
+    <Property Name="IdExam" Type="int" Nullable="false" />
+    <Property Name="IdParticipant" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Expert">
+    <Key>
+      <PropertyRef Name="IdExpert" />
+    </Key>
+    <Property Name="IdExpert" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Passport" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdSkill" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Organizer">
+    <Key>
+      <PropertyRef Name="IdOrganizer" />
+    </Key>
+    <Property Name="IdOrganizer" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Passport" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Participant">
+    <Key>
+      <PropertyRef Name="IdParticipant" />
+    </Key>
+    <Property Name="IdParticipant" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Sex" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="BirthDate" Type="date" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Passport" Type="nvarchar" MaxLength="11" Nullable="false" />
+    <Property Name="Photo" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="IdSkill" />
+    </Key>
+    <Property Name="IdSkill" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="SkillName_Russian" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="SkillName_English" Type="nvarchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_ChiefExpert_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="0..1" />
+    <End Role="ChiefExpert" Type="Self.ChiefExpert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="IdSkill" />
+      </Principal>
+      <Dependent Role="ChiefExpert">
+        <PropertyRef Name="IdSkill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exam_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="1" />
+    <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="IdSkill" />
+      </Principal>
+      <Dependent Role="Exam">
+        <PropertyRef Name="IdSkill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExamParticipant_Exam">
+    <End Role="Exam" Type="Self.Exam" Multiplicity="1" />
+    <End Role="ExamParticipant" Type="Self.ExamParticipant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Exam">
+        <PropertyRef Name="IdExam" />
+      </Principal>
+      <Dependent Role="ExamParticipant">
+        <PropertyRef Name="IdExam" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExamParticipant_Participant">
+    <End Role="Participant" Type="Self.Participant" Multiplicity="1" />
+    <End Role="ExamParticipant" Type="Self.ExamParticipant" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Participant">
+        <PropertyRef Name="IdParticipant" />
+      </Principal>
+      <Dependent Role="ExamParticipant">
+        <PropertyRef Name="IdParticipant" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expert_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="0..1" />
+    <End Role="Expert" Type="Self.Expert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="IdSkill" />
+      </Principal>
+      <Dependent Role="Expert">
+        <PropertyRef Name="IdSkill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище ExamModelContainer">
+    <EntitySet Name="ChiefExpert" EntityType="Self.ChiefExpert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Exam" EntityType="Self.Exam" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Expert" EntityType="Self.Expert" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Organizer" EntityType="Self.Organizer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Participant" EntityType="Self.Participant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ExamParticipant" EntityType="Self.ExamParticipant" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [ExamParticipant].[IdExam] AS [IdExam], 
+    [ExamParticipant].[IdParticipant] AS [IdParticipant]
+    FROM [dbo].[ExamParticipant] AS [ExamParticipant]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_ChiefExpert_Skill" Association="Self.FK_ChiefExpert_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="ChiefExpert" EntitySet="ChiefExpert" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exam_Skill" Association="Self.FK_Exam_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="Exam" EntitySet="Exam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExamParticipant_Exam" Association="Self.FK_ExamParticipant_Exam">
+      <End Role="Exam" EntitySet="Exam" />
+      <End Role="ExamParticipant" EntitySet="ExamParticipant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExamParticipant_Participant" Association="Self.FK_ExamParticipant_Participant">
+      <End Role="Participant" EntitySet="Participant" />
+      <End Role="ExamParticipant" EntitySet="ExamParticipant" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expert_Skill" Association="Self.FK_Expert_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="Expert" EntitySet="Expert" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

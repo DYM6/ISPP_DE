@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ExamModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ChiefExpert">
+    <Key>
+      <PropertyRef Name="IdChiefExpert" />
+    </Key>
+    <Property Name="IdChiefExpert" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Passport" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdSkill" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Skill" Relationship="Self.FK_ChiefExpert_Skill" FromRole="ChiefExpert" ToRole="Skill" />
+  </EntityType>
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="IdExam" />
+    </Key>
+    <Property Name="IdExam" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdSkill" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Skill" Relationship="Self.FK_Exam_Skill" FromRole="Exam" ToRole="Skill" />
+    <NavigationProperty Name="Participant" Relationship="Self.ExamParticipant" FromRole="Exam" ToRole="Participant" />
+  </EntityType>
+  <EntityType Name="Expert">
+    <Key>
+      <PropertyRef Name="IdExpert" />
+    </Key>
+    <Property Name="IdExpert" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Passport" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdSkill" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Skill" Relationship="Self.FK_Expert_Skill" FromRole="Expert" ToRole="Skill" />
+  </EntityType>
+  <EntityType Name="Organizer">
+    <Key>
+      <PropertyRef Name="IdOrganizer" />
+    </Key>
+    <Property Name="IdOrganizer" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Passport" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Participant">
+    <Key>
+      <PropertyRef Name="IdParticipant" />
+    </Key>
+    <Property Name="IdParticipant" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BirthDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Passport" Type="String" MaxLength="11" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Exam" Relationship="Self.ExamParticipant" FromRole="Participant" ToRole="Exam" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="IdSkill" />
+    </Key>
+    <Property Name="IdSkill" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SkillName_Russian" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SkillName_English" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="ChiefExpert" Relationship="Self.FK_ChiefExpert_Skill" FromRole="Skill" ToRole="ChiefExpert" />
+    <NavigationProperty Name="Exam" Relationship="Self.FK_Exam_Skill" FromRole="Skill" ToRole="Exam" />
+    <NavigationProperty Name="Expert" Relationship="Self.FK_Expert_Skill" FromRole="Skill" ToRole="Expert" />
+  </EntityType>
+  <Association Name="FK_ChiefExpert_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="0..1" />
+    <End Role="ChiefExpert" Type="Self.ChiefExpert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="IdSkill" />
+      </Principal>
+      <Dependent Role="ChiefExpert">
+        <PropertyRef Name="IdSkill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Exam_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="1" />
+    <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="IdSkill" />
+      </Principal>
+      <Dependent Role="Exam">
+        <PropertyRef Name="IdSkill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Expert_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="0..1" />
+    <End Role="Expert" Type="Self.Expert" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="IdSkill" />
+      </Principal>
+      <Dependent Role="Expert">
+        <PropertyRef Name="IdSkill" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExamParticipant">
+    <End Role="Exam" Type="Self.Exam" Multiplicity="*" />
+    <End Role="Participant" Type="Self.Participant" Multiplicity="*" />
+  </Association>
+  <EntityContainer Name="ExamsEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ChiefExpert" EntityType="Self.ChiefExpert" />
+    <EntitySet Name="Exam" EntityType="Self.Exam" />
+    <EntitySet Name="Expert" EntityType="Self.Expert" />
+    <EntitySet Name="Organizer" EntityType="Self.Organizer" />
+    <EntitySet Name="Participant" EntityType="Self.Participant" />
+    <EntitySet Name="Skill" EntityType="Self.Skill" />
+    <AssociationSet Name="FK_ChiefExpert_Skill" Association="Self.FK_ChiefExpert_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="ChiefExpert" EntitySet="ChiefExpert" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Exam_Skill" Association="Self.FK_Exam_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="Exam" EntitySet="Exam" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Expert_Skill" Association="Self.FK_Expert_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="Expert" EntitySet="Expert" />
+    </AssociationSet>
+    <AssociationSet Name="ExamParticipant" Association="Self.ExamParticipant">
+      <End Role="Exam" EntitySet="Exam" />
+      <End Role="Participant" EntitySet="Participant" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

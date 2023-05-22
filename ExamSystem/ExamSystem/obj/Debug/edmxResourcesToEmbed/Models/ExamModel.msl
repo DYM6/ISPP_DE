@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ExamModelContainer" CdmEntityContainer="ExamsEntities">
+    <EntitySetMapping Name="ChiefExpert">
+      <EntityTypeMapping TypeName="ExamModel.ChiefExpert">
+        <MappingFragment StoreEntitySet="ChiefExpert">
+          <ScalarProperty Name="IdChiefExpert" ColumnName="IdChiefExpert" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IdSkill" ColumnName="IdSkill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exam">
+      <EntityTypeMapping TypeName="ExamModel.Exam">
+        <MappingFragment StoreEntitySet="Exam">
+          <ScalarProperty Name="IdExam" ColumnName="IdExam" />
+          <ScalarProperty Name="IdSkill" ColumnName="IdSkill" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expert">
+      <EntityTypeMapping TypeName="ExamModel.Expert">
+        <MappingFragment StoreEntitySet="Expert">
+          <ScalarProperty Name="IdExpert" ColumnName="IdExpert" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="IdSkill" ColumnName="IdSkill" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Organizer">
+      <EntityTypeMapping TypeName="ExamModel.Organizer">
+        <MappingFragment StoreEntitySet="Organizer">
+          <ScalarProperty Name="IdOrganizer" ColumnName="IdOrganizer" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Participant">
+      <EntityTypeMapping TypeName="ExamModel.Participant">
+        <MappingFragment StoreEntitySet="Participant">
+          <ScalarProperty Name="IdParticipant" ColumnName="IdParticipant" />
+          <ScalarProperty Name="FullName" ColumnName="FullName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Skill">
+      <EntityTypeMapping TypeName="ExamModel.Skill">
+        <MappingFragment StoreEntitySet="Skill">
+          <ScalarProperty Name="IdSkill" ColumnName="IdSkill" />
+          <ScalarProperty Name="SkillName_Russian" ColumnName="SkillName_Russian" />
+          <ScalarProperty Name="SkillName_English" ColumnName="SkillName_English" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="ExamParticipant" TypeName="ExamModel.ExamParticipant" StoreEntitySet="ExamParticipant">
+      <EndProperty Name="Exam">
+        <ScalarProperty Name="IdExam" ColumnName="IdExam" />
+      </EndProperty>
+      <EndProperty Name="Participant">
+        <ScalarProperty Name="IdParticipant" ColumnName="IdParticipant" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
