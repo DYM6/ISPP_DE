@@ -1,0 +1,3 @@
+login: ispp05exNN (NN - 01-14) 
+password sql: NN (NN - 01-14) 
+password git: ispp05ex 
