@@ -32,3 +32,4 @@ C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\EntityFramewor
 C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\ru\EntityFramework.resources.dll
 C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
 C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.AuthForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.ChiefExpertForm.resources

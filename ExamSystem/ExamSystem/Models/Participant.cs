@@ -11,7 +11,9 @@ namespace ExamSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Drawing;
+    using System.IO;
+
     public partial class Participant
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -31,5 +33,19 @@ namespace ExamSystem.Models
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Exam> Exam { get; set; }
+
+        public Image PhotoImage
+        {
+            get
+            {
+                var filename = Path.Combine(Environment.CurrentDirectory, "Участники", Photo);
+
+                if (File.Exists(filename))
+                {
+                    return Image.FromFile(filename);
+                }
+                return null;
+            }
+        }
     }
 }

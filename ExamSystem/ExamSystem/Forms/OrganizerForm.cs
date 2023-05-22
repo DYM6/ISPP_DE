@@ -12,7 +12,7 @@ namespace ExamSystem.Forms
 {
     public partial class OrganizerForm : Form
     {
-        public OrganizerForm()
+        public OrganizerForm(int id)
         {
             InitializeComponent();
         }

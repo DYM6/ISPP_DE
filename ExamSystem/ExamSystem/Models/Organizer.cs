@@ -11,7 +11,9 @@ namespace ExamSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Drawing;
+    using System.IO;
+
     public partial class Organizer
     {
         public int IdOrganizer { get; set; }
@@ -22,5 +24,19 @@ namespace ExamSystem.Models
         public string Email { get; set; }
         public string Passport { get; set; }
         public string Photo { get; set; }
+
+        public Image PhotoImage
+        {
+            get
+            {
+                var filename = Path.Combine(Environment.CurrentDirectory, "Организаторы", Photo);
+                
+                if (File.Exists(filename))
+                {
+                    return Image.FromFile(filename);
+                }
+                return null;
+            }
+        }
     }
 }

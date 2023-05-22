@@ -11,7 +11,9 @@ namespace ExamSystem.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Drawing;
+    using System.IO;
+
     public partial class ChiefExpert
     {
         public int IdChiefExpert { get; set; }
@@ -25,5 +27,19 @@ namespace ExamSystem.Models
         public string IdSkill { get; set; }
     
         public virtual Skill Skill { get; set; }
+
+        public Image PhotoImage
+        {
+            get
+            {
+                var filename = Path.Combine(Environment.CurrentDirectory, "Главные эксперты", Photo);
+
+                if (File.Exists(filename))
+                {
+                    return Image.FromFile(filename);
+                }
+                return null;
+            }
+        }
     }
 }

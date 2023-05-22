@@ -59,7 +59,7 @@ namespace ExamSystem.Forms
             // 
             this.AuthButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AuthButton.Location = new System.Drawing.Point(75, 96);
+            this.AuthButton.Location = new System.Drawing.Point(75, 120);
             this.AuthButton.Name = "AuthButton";
             this.AuthButton.Size = new System.Drawing.Size(337, 23);
             this.AuthButton.TabIndex = 2;
@@ -88,11 +88,11 @@ namespace ExamSystem.Forms
             // ShowPasswordCheckBox
             // 
             this.ShowPasswordCheckBox.AutoSize = true;
-            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(75, 126);
+            this.ShowPasswordCheckBox.Location = new System.Drawing.Point(75, 97);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
-            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(80, 17);
+            this.ShowPasswordCheckBox.Size = new System.Drawing.Size(114, 17);
             this.ShowPasswordCheckBox.TabIndex = 5;
-            this.ShowPasswordCheckBox.Text = "checkBox1";
+            this.ShowPasswordCheckBox.Text = "Показать пароль";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
             this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
             // 

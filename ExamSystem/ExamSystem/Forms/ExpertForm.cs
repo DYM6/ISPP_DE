@@ -12,7 +12,7 @@ namespace ExamSystem.Forms
 {
     public partial class ExpertForm : Form
     {
-        public ExpertForm()
+        public ExpertForm(int id)
         {
             InitializeComponent();
         }
