@@ -17,7 +17,8 @@ namespace ExamSystem
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChiefExpertForm(1));
+            Application.Run(new OrganizerForm(200));
+            //ParticipantListForm
         }
     }
 }

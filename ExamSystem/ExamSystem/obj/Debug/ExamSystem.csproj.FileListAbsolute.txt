@@ -33,3 +33,9 @@ C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\bin\Debug\ru\EntityFrame
 C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.CopyComplete
 C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.AuthForm.resources
 C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.ChiefExpertForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.csproj.SuggestedBindingRedirects.cache
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.ExpertForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.OrganizerForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.ParticipantForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.ParticipantListForm.resources
+C:\Temp\ISPP-05_DE\ExamSystem — копия\ExamSystem\obj\Debug\ExamSystem.Forms.RegisterForm.resources

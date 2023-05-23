@@ -21,7 +21,9 @@ namespace ExamSystem
 
         private void ExamForm_Load(object sender, EventArgs e)
         {
-            
+            ShowExams();
+
+            SkillsBox.DropDownStyle= ComboBoxStyle.DropDownList;
 
             try
             {
@@ -36,7 +38,7 @@ namespace ExamSystem
                 throw;
             }
 
-            ShowExams();
+           
         }
 
         private void ShowExams()
@@ -44,16 +46,19 @@ namespace ExamSystem
             try
             {
                 var exams = new ExamsEntities().Exam.ToList();
+                dataGridView1.DataSource = exams;
 
-                if (SkillsBox.SelectedIndex >0)
-                {
-                    exams = exams.Where(e=>e.Name == (SkillsBox.SelectedItem as Skill).SkillName_Russian).ToList();
-                }
-                if (ExamsDatePicker.Checked)
-                {
-                    exams = exams.Where(e => e.Date.ToShortDateString() == ExamsDatePicker.Value.ToShortDateString()).ToList();
-                }
-                dataGridView1.DataSource = exams.OrderByDescending(e=>e.Date).ToList();
+                //if (SkillsBox.SelectedIndex >0)
+                //{
+                //    exams = exams.Where(e=>e.Name == (SkillsBox.SelectedItem as Skill).SkillName_Russian).ToList();
+                //}
+                //if (ExamsDatePicker.Checked)
+                //{
+                //    exams = exams.Where(e => e.Date.ToShortDateString() == ExamsDatePicker.Value.ToShortDateString()).ToList();
+                //}
+
+                //dataGridView1.DataSource = exams.OrderByDescending(e=>e.Date).ToList();
+
                 if (exams.Count == 0)
                 {
                     MessageBox.Show("не найдены");

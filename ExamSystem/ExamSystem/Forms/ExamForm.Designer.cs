@@ -34,8 +34,14 @@
             this.SkillsBox = new System.Windows.Forms.ComboBox();
             this.AuthorizeButton = new System.Windows.Forms.Button();
             this.ExamsDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.examBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -43,7 +49,12 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.examBindingSource;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
+            this.dataGridView1.DataSource = this.examBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 114);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 324);
@@ -74,6 +85,34 @@
             this.ExamsDatePicker.Size = new System.Drawing.Size(200, 20);
             this.ExamsDatePicker.TabIndex = 3;
             // 
+            // examBindingSource1
+            // 
+            this.examBindingSource1.DataSource = typeof(ExamSystem.Models.Exam);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "IdExam";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Код экзамена";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "IdSkill";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Код компетенции";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Date";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Date";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +127,7 @@
             this.Load += new System.EventHandler(this.ExamForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -105,6 +145,11 @@
         private System.Windows.Forms.ComboBox SkillsBox;
         private System.Windows.Forms.Button AuthorizeButton;
         private System.Windows.Forms.DateTimePicker ExamsDatePicker;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.BindingSource examBindingSource1;
     }
 }
 

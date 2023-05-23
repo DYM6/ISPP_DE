@@ -91,6 +91,18 @@
     <Compile Include="Forms\ParticipantForm.Designer.cs">
       <DependentUpon>ParticipantForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ParticipantListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ParticipantListForm.Designer.cs">
+      <DependentUpon>ParticipantListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ChiefExpert.cs">
       <DependentUpon>ExamModel.tt</DependentUpon>
     </Compile>
@@ -135,6 +147,21 @@
     <EmbeddedResource Include="Forms\ExamForm.resx">
       <DependentUpon>ExamForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExpertForm.resx">
+      <DependentUpon>ExpertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrganizerForm.resx">
+      <DependentUpon>OrganizerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParticipantForm.resx">
+      <DependentUpon>ParticipantForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ParticipantListForm.resx">
+      <DependentUpon>ParticipantListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -143,11 +170,14 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EntityDeploy Include="Models\ExamModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>ExamModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="ExamSystem.Models.Exam.datasource" />
+    <None Include="ExamSystem.Models.Participant.datasource" />
     <None Include="Models\ExamModel.edmx.diagram">
       <DependentUpon>ExamModel.edmx</DependentUpon>
     </None>
@@ -180,6 +210,7 @@
       <DependentUpon>ExamModel.edmx</DependentUpon>
       <LastGenOutput>ExamModel.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\Фото для заглушки.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

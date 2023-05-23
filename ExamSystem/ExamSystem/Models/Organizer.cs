@@ -29,12 +29,16 @@ namespace ExamSystem.Models
         {
             get
             {
-                var filename = Path.Combine(Environment.CurrentDirectory, "Организаторы", Photo);
-                
-                if (File.Exists(filename))
+                if (Photo != null)
                 {
-                    return Image.FromFile(filename);
+                    var filename = Path.Combine(Environment.CurrentDirectory, "Участники", Photo);
+
+                    if (File.Exists(filename))
+                    {
+                        return Image.FromFile(filename);
+                    }
                 }
+
                 return null;
             }
         }

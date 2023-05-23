@@ -29,12 +29,87 @@ namespace ExamSystem.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.greetingLable = new System.Windows.Forms.Label();
+            this.PhotoBox = new System.Windows.Forms.PictureBox();
+            this.ShowExamsButton = new System.Windows.Forms.Button();
+            this.ShowParticipantsButton = new System.Windows.Forms.Button();
+            this.RegisterButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoBox)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // greetingLable
+            // 
+            this.greetingLable.AutoSize = true;
+            this.greetingLable.Location = new System.Drawing.Point(246, 12);
+            this.greetingLable.Name = "greetingLable";
+            this.greetingLable.Size = new System.Drawing.Size(35, 13);
+            this.greetingLable.TabIndex = 5;
+            this.greetingLable.Text = "label1";
+            // 
+            // PhotoBox
+            // 
+            this.PhotoBox.Location = new System.Drawing.Point(12, 12);
+            this.PhotoBox.Name = "PhotoBox";
+            this.PhotoBox.Size = new System.Drawing.Size(192, 175);
+            this.PhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PhotoBox.TabIndex = 4;
+            this.PhotoBox.TabStop = false;
+            // 
+            // ShowExamsButton
+            // 
+            this.ShowExamsButton.Location = new System.Drawing.Point(12, 211);
+            this.ShowExamsButton.Name = "ShowExamsButton";
+            this.ShowExamsButton.Size = new System.Drawing.Size(192, 37);
+            this.ShowExamsButton.TabIndex = 6;
+            this.ShowExamsButton.Text = "Экзамены";
+            this.ShowExamsButton.UseVisualStyleBackColor = true;
+            this.ShowExamsButton.Click += new System.EventHandler(this.ShowExamsButton_Click);
+            // 
+            // ShowParticipantsButton
+            // 
+            this.ShowParticipantsButton.Location = new System.Drawing.Point(12, 254);
+            this.ShowParticipantsButton.Name = "ShowParticipantsButton";
+            this.ShowParticipantsButton.Size = new System.Drawing.Size(192, 37);
+            this.ShowParticipantsButton.TabIndex = 7;
+            this.ShowParticipantsButton.Text = "Участники";
+            this.ShowParticipantsButton.UseVisualStyleBackColor = true;
+            this.ShowParticipantsButton.Click += new System.EventHandler(this.ShowParticipantsButton_Click);
+            // 
+            // RegisterButton
+            // 
+            this.RegisterButton.Location = new System.Drawing.Point(12, 297);
+            this.RegisterButton.Name = "RegisterButton";
+            this.RegisterButton.Size = new System.Drawing.Size(192, 37);
+            this.RegisterButton.TabIndex = 8;
+            this.RegisterButton.Text = "Регистрация";
+            this.RegisterButton.UseVisualStyleBackColor = true;
+            this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
+            // OrganizerForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "OrganizerForm";
+            this.Controls.Add(this.RegisterButton);
+            this.Controls.Add(this.ShowParticipantsButton);
+            this.Controls.Add(this.ShowExamsButton);
+            this.Controls.Add(this.greetingLable);
+            this.Controls.Add(this.PhotoBox);
+            this.Name = "OrganizerForm";
+            this.Text = "Организатор";
+            this.Load += new System.EventHandler(this.OrganizerForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PhotoBox)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Label greetingLable;
+        private System.Windows.Forms.PictureBox PhotoBox;
+        private System.Windows.Forms.Button ShowExamsButton;
+        private System.Windows.Forms.Button ShowParticipantsButton;
+        private System.Windows.Forms.Button RegisterButton;
     }
 }
