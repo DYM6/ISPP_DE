@@ -30,18 +30,18 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.SkillsBox = new System.Windows.Forms.ComboBox();
-            this.AuthorizeButton = new System.Windows.Forms.Button();
-            this.ExamsDatePicker = new System.Windows.Forms.DateTimePicker();
-            this.examBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.examBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.SkillsBox = new System.Windows.Forms.ComboBox();
+            this.AuthorizeButton = new System.Windows.Forms.Button();
+            this.ExamsDatePicker = new System.Windows.Forms.DateTimePicker();
+            this.examBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -58,36 +58,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 114);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(776, 324);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // SkillsBox
-            // 
-            this.SkillsBox.FormattingEnabled = true;
-            this.SkillsBox.Location = new System.Drawing.Point(12, 78);
-            this.SkillsBox.Name = "SkillsBox";
-            this.SkillsBox.Size = new System.Drawing.Size(545, 21);
-            this.SkillsBox.TabIndex = 1;
-            // 
-            // AuthorizeButton
-            // 
-            this.AuthorizeButton.Location = new System.Drawing.Point(12, 28);
-            this.AuthorizeButton.Name = "AuthorizeButton";
-            this.AuthorizeButton.Size = new System.Drawing.Size(169, 23);
-            this.AuthorizeButton.TabIndex = 2;
-            this.AuthorizeButton.Text = "Авторизация";
-            this.AuthorizeButton.UseVisualStyleBackColor = true;
-            this.AuthorizeButton.Click += new System.EventHandler(this.AuthorizeButton_Click);
-            // 
-            // ExamsDatePicker
-            // 
-            this.ExamsDatePicker.Location = new System.Drawing.Point(588, 78);
-            this.ExamsDatePicker.Name = "ExamsDatePicker";
-            this.ExamsDatePicker.Size = new System.Drawing.Size(200, 20);
-            this.ExamsDatePicker.TabIndex = 3;
-            // 
-            // examBindingSource1
-            // 
-            this.examBindingSource1.DataSource = typeof(ExamSystem.Models.Exam);
+            this.dataGridView1.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -113,6 +84,35 @@
             this.dataGridViewTextBoxColumn4.HeaderText = "Date";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
+            // examBindingSource1
+            // 
+            this.examBindingSource1.DataSource = typeof(ExamSystem.Models.Exam);
+            // 
+            // SkillsBox
+            // 
+            this.SkillsBox.FormattingEnabled = true;
+            this.SkillsBox.Location = new System.Drawing.Point(12, 78);
+            this.SkillsBox.Name = "SkillsBox";
+            this.SkillsBox.Size = new System.Drawing.Size(545, 21);
+            this.SkillsBox.TabIndex = 1;
+            // 
+            // AuthorizeButton
+            // 
+            this.AuthorizeButton.Location = new System.Drawing.Point(12, 28);
+            this.AuthorizeButton.Name = "AuthorizeButton";
+            this.AuthorizeButton.Size = new System.Drawing.Size(169, 23);
+            this.AuthorizeButton.TabIndex = 0;
+            this.AuthorizeButton.Text = "Авторизация";
+            this.AuthorizeButton.UseVisualStyleBackColor = true;
+            this.AuthorizeButton.Click += new System.EventHandler(this.AuthorizeButton_Click);
+            // 
+            // ExamsDatePicker
+            // 
+            this.ExamsDatePicker.Location = new System.Drawing.Point(588, 78);
+            this.ExamsDatePicker.Name = "ExamsDatePicker";
+            this.ExamsDatePicker.Size = new System.Drawing.Size(200, 20);
+            this.ExamsDatePicker.TabIndex = 2;
+            // 
             // ExamForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -123,11 +123,11 @@
             this.Controls.Add(this.SkillsBox);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ExamForm";
-            this.Text = "Form1";
+            this.Text = "Список экзаменов";
             this.Load += new System.EventHandler(this.ExamForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.examBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.examBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

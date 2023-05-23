@@ -30,10 +30,10 @@ namespace ExamSystem.Forms
         private void InitializeComponent()
         {
             this.greetingLable = new System.Windows.Forms.Label();
-            this.PhotoBox = new System.Windows.Forms.PictureBox();
             this.ShowExamsButton = new System.Windows.Forms.Button();
             this.ShowParticipantsButton = new System.Windows.Forms.Button();
             this.RegisterButton = new System.Windows.Forms.Button();
+            this.PhotoBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.PhotoBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,21 +46,12 @@ namespace ExamSystem.Forms
             this.greetingLable.TabIndex = 5;
             this.greetingLable.Text = "label1";
             // 
-            // PhotoBox
-            // 
-            this.PhotoBox.Location = new System.Drawing.Point(12, 12);
-            this.PhotoBox.Name = "PhotoBox";
-            this.PhotoBox.Size = new System.Drawing.Size(192, 175);
-            this.PhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PhotoBox.TabIndex = 4;
-            this.PhotoBox.TabStop = false;
-            // 
             // ShowExamsButton
             // 
             this.ShowExamsButton.Location = new System.Drawing.Point(12, 211);
             this.ShowExamsButton.Name = "ShowExamsButton";
             this.ShowExamsButton.Size = new System.Drawing.Size(192, 37);
-            this.ShowExamsButton.TabIndex = 6;
+            this.ShowExamsButton.TabIndex = 0;
             this.ShowExamsButton.Text = "Экзамены";
             this.ShowExamsButton.UseVisualStyleBackColor = true;
             this.ShowExamsButton.Click += new System.EventHandler(this.ShowExamsButton_Click);
@@ -70,7 +61,7 @@ namespace ExamSystem.Forms
             this.ShowParticipantsButton.Location = new System.Drawing.Point(12, 254);
             this.ShowParticipantsButton.Name = "ShowParticipantsButton";
             this.ShowParticipantsButton.Size = new System.Drawing.Size(192, 37);
-            this.ShowParticipantsButton.TabIndex = 7;
+            this.ShowParticipantsButton.TabIndex = 1;
             this.ShowParticipantsButton.Text = "Участники";
             this.ShowParticipantsButton.UseVisualStyleBackColor = true;
             this.ShowParticipantsButton.Click += new System.EventHandler(this.ShowParticipantsButton_Click);
@@ -80,10 +71,19 @@ namespace ExamSystem.Forms
             this.RegisterButton.Location = new System.Drawing.Point(12, 297);
             this.RegisterButton.Name = "RegisterButton";
             this.RegisterButton.Size = new System.Drawing.Size(192, 37);
-            this.RegisterButton.TabIndex = 8;
+            this.RegisterButton.TabIndex = 2;
             this.RegisterButton.Text = "Регистрация";
             this.RegisterButton.UseVisualStyleBackColor = true;
             this.RegisterButton.Click += new System.EventHandler(this.RegisterButton_Click);
+            // 
+            // PhotoBox
+            // 
+            this.PhotoBox.Location = new System.Drawing.Point(12, 12);
+            this.PhotoBox.Name = "PhotoBox";
+            this.PhotoBox.Size = new System.Drawing.Size(192, 175);
+            this.PhotoBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PhotoBox.TabIndex = 4;
+            this.PhotoBox.TabStop = false;
             // 
             // OrganizerForm
             // 

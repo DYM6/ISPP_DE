@@ -128,7 +128,7 @@
             this.idBox.Location = new System.Drawing.Point(112, 187);
             this.idBox.Name = "idBox";
             this.idBox.Size = new System.Drawing.Size(221, 20);
-            this.idBox.TabIndex = 7;
+            this.idBox.TabIndex = 0;
             // 
             // FullNameBox
             // 
@@ -138,7 +138,7 @@
             this.FullNameBox.MaxLength = 200;
             this.FullNameBox.Name = "FullNameBox";
             this.FullNameBox.Size = new System.Drawing.Size(221, 20);
-            this.FullNameBox.TabIndex = 8;
+            this.FullNameBox.TabIndex = 1;
             // 
             // sexComboBox
             // 
@@ -151,7 +151,7 @@
             this.sexComboBox.Location = new System.Drawing.Point(112, 240);
             this.sexComboBox.Name = "sexComboBox";
             this.sexComboBox.Size = new System.Drawing.Size(221, 21);
-            this.sexComboBox.TabIndex = 9;
+            this.sexComboBox.TabIndex = 2;
             // 
             // roleComboBox
             // 
@@ -165,7 +165,7 @@
             this.roleComboBox.Location = new System.Drawing.Point(112, 293);
             this.roleComboBox.Name = "roleComboBox";
             this.roleComboBox.Size = new System.Drawing.Size(221, 21);
-            this.roleComboBox.TabIndex = 10;
+            this.roleComboBox.TabIndex = 4;
             // 
             // label8
             // 
@@ -184,7 +184,7 @@
             this.PhoneMaskedTextBox.Mask = "+7 (000) 000-00-00";
             this.PhoneMaskedTextBox.Name = "PhoneMaskedTextBox";
             this.PhoneMaskedTextBox.Size = new System.Drawing.Size(221, 20);
-            this.PhoneMaskedTextBox.TabIndex = 12;
+            this.PhoneMaskedTextBox.TabIndex = 5;
             // 
             // BirthDatePicker
             // 
@@ -193,7 +193,7 @@
             this.BirthDatePicker.Location = new System.Drawing.Point(112, 267);
             this.BirthDatePicker.Name = "BirthDatePicker";
             this.BirthDatePicker.Size = new System.Drawing.Size(221, 20);
-            this.BirthDatePicker.TabIndex = 15;
+            this.BirthDatePicker.TabIndex = 3;
             // 
             // label9
             // 
@@ -212,7 +212,7 @@
             this.emailBox.MaxLength = 100;
             this.emailBox.Name = "emailBox";
             this.emailBox.Size = new System.Drawing.Size(221, 20);
-            this.emailBox.TabIndex = 17;
+            this.emailBox.TabIndex = 6;
             // 
             // passwordBox
             // 
@@ -222,7 +222,7 @@
             this.passwordBox.MaxLength = 11;
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(221, 20);
-            this.passwordBox.TabIndex = 18;
+            this.passwordBox.TabIndex = 7;
             // 
             // ConfirmPasswordBox
             // 
@@ -232,7 +232,7 @@
             this.ConfirmPasswordBox.MaxLength = 11;
             this.ConfirmPasswordBox.Name = "ConfirmPasswordBox";
             this.ConfirmPasswordBox.Size = new System.Drawing.Size(221, 20);
-            this.ConfirmPasswordBox.TabIndex = 20;
+            this.ConfirmPasswordBox.TabIndex = 8;
             // 
             // RepeatPasswordBox
             // 
@@ -249,7 +249,7 @@
             this.AddToExamCheckBox.Location = new System.Drawing.Point(112, 501);
             this.AddToExamCheckBox.Name = "AddToExamCheckBox";
             this.AddToExamCheckBox.Size = new System.Drawing.Size(235, 17);
-            this.AddToExamCheckBox.TabIndex = 21;
+            this.AddToExamCheckBox.TabIndex = 12;
             this.AddToExamCheckBox.Text = "Прикрепить к экзамену (для участников)";
             this.AddToExamCheckBox.UseVisualStyleBackColor = true;
             // 
@@ -261,7 +261,7 @@
             this.skillsComboBox.Location = new System.Drawing.Point(112, 447);
             this.skillsComboBox.Name = "skillsComboBox";
             this.skillsComboBox.Size = new System.Drawing.Size(221, 21);
-            this.skillsComboBox.TabIndex = 22;
+            this.skillsComboBox.TabIndex = 10;
             this.skillsComboBox.SelectedIndexChanged += new System.EventHandler(this.SkillsComboBox_SelectedIndexChanged);
             // 
             // examsComboBox
@@ -272,7 +272,7 @@
             this.examsComboBox.Location = new System.Drawing.Point(112, 474);
             this.examsComboBox.Name = "examsComboBox";
             this.examsComboBox.Size = new System.Drawing.Size(221, 21);
-            this.examsComboBox.TabIndex = 24;
+            this.examsComboBox.TabIndex = 11;
             // 
             // label10
             // 
@@ -289,7 +289,7 @@
             this.ShowPasswordCheckBox.Location = new System.Drawing.Point(112, 424);
             this.ShowPasswordCheckBox.Name = "ShowPasswordCheckBox";
             this.ShowPasswordCheckBox.Size = new System.Drawing.Size(114, 17);
-            this.ShowPasswordCheckBox.TabIndex = 25;
+            this.ShowPasswordCheckBox.TabIndex = 9;
             this.ShowPasswordCheckBox.Text = "Показать пароль";
             this.ShowPasswordCheckBox.UseVisualStyleBackColor = true;
             this.ShowPasswordCheckBox.CheckedChanged += new System.EventHandler(this.ShowPasswordCheckBox_CheckedChanged);
@@ -314,7 +314,7 @@
             this.SaveButton.Location = new System.Drawing.Point(20, 536);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(312, 23);
-            this.SaveButton.TabIndex = 27;
+            this.SaveButton.TabIndex = 13;
             this.SaveButton.Text = "Сохранить";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);

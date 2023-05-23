@@ -62,7 +62,7 @@ namespace ExamSystem.Forms
             this.Controls.Add(this.greetingLable);
             this.Controls.Add(this.PhotoBox);
             this.Name = "ExpertForm";
-            this.Text = "ExpertForm";
+            this.Text = "Эксперт";
             ((System.ComponentModel.ISupportInitialize)(this.PhotoBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

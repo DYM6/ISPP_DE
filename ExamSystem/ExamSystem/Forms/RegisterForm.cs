@@ -20,26 +20,34 @@ namespace ExamSystem.Forms
         {
             InitializeComponent();
 
-            var db = new ExamsEntities();
+            try
+            {
+                var db = new ExamsEntities();
 
-            var max = db
-                .Organizer.Select(u => new { Id = u.IdOrganizer })
-                .Union(db.Participant.Select(u => new { Id = u.IdParticipant }))
-                .Union(db.Expert.Select(u => new { Id = u.IdExpert }))
-                .Union(db.ChiefExpert.Select(u => new { Id = u.IdChiefExpert }))
-                .Max(u => u.Id);
+                var max = db
+                    .Organizer.Select(u => new { Id = u.IdOrganizer })
+                    .Union(db.Participant.Select(u => new { Id = u.IdParticipant }))
+                    .Union(db.Expert.Select(u => new { Id = u.IdExpert }))
+                    .Union(db.ChiefExpert.Select(u => new { Id = u.IdChiefExpert }))
+                    .Max(u => u.Id);
 
-            int id = new Random().Next(max+1, max + 10);
-            idBox.Text = id.ToString();
-            idBox.Enabled = false;
-            sexComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            roleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            skillsComboBox.DropDownStyle= ComboBoxStyle.DropDownList;
-            examsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                int id = new Random().Next(max + 1, max + 10);
+                idBox.Text = id.ToString();
+                idBox.Enabled = false;
+                sexComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                roleComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                skillsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+                examsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
 
-            var skills = new ExamsEntities().Skill.OrderBy(s=>s.SkillName_Russian).ToList();
-            skillsComboBox.DataSource= skills;
-            skillsComboBox.DisplayMember= "SkillName_Russian";
+                var skills = new ExamsEntities().Skill.OrderBy(s => s.SkillName_Russian).ToList();
+                skillsComboBox.DataSource = skills;
+                skillsComboBox.DisplayMember = "SkillName_Russian";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Не удалось получить данные\n" + ex);
+            }
+            
         }
 
         private void SkillsComboBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,11 +55,17 @@ namespace ExamSystem.Forms
             var skill = skillsComboBox.SelectedItem as Skill;
             if (skill != null)
             {
-                var exams = new ExamsEntities().Exam.Where(exam => exam.IdSkill==skill.IdSkill).ToList();
-                examsComboBox.DataSource = exams;
-                examsComboBox.DisplayMember = "Name";
+                try
+                {
+                    var exams = new ExamsEntities().Exam.Where(exam => exam.IdSkill == skill.IdSkill).ToList();
+                    examsComboBox.DataSource = exams;
+                    examsComboBox.DisplayMember = "Name";
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Не удалось получить список экзаменов\n" + ex);
+                }
             }
-
         }
 
         //выбор фото
@@ -62,10 +76,7 @@ namespace ExamSystem.Forms
             if (ofd.ShowDialog()==DialogResult.OK)
             {
                 photoLabel.Text = ofd.FileName;
-                photoBox.Image = Image.FromFile(ofd.FileName);
-
-                
-                    
+                photoBox.Image = Image.FromFile(ofd.FileName);    
             }
             else
             {
@@ -174,6 +185,10 @@ namespace ExamSystem.Forms
             {
                 var db = new ExamsEntities();
                 db.Participant.Add(user);
+                if (AddToExamCheckBox.Checked)
+                {
+                    user.Exam.Add(examsComboBox.SelectedItem as Exam);
+                }
                 db.SaveChanges();
                 MessageBox.Show("Данные успешно сохранены в БД");
             }
